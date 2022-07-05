@@ -3,7 +3,7 @@ const app = new Vue(
         el: '#app',
         
         data:{
-            index: 1,
+            index: 0,
             slides:[
                 {
                     image: 'img/01.jpg',
@@ -34,5 +34,21 @@ const app = new Vue(
             
         },
     
+
+
+        methods: {
+            next: function() {
+                this.index++;
+                if (this.index===this.slides.length){
+                    this.index=0;
+                }
+            },
+            prev: function () {
+                this.index--;
+                if (this.index===0) {
+                    this.index= this.slides.length -1;
+                }
+            }
+        },
     }
 );
