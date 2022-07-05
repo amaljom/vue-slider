@@ -3,7 +3,7 @@ const app = new Vue(
         el: '#app',
         
         data:{
-            index: 0,
+            index: 1,
             slides:[
                 {
                     image: 'img/01.jpg',
