@@ -42,12 +42,16 @@ const app = new Vue(
                 if (this.index===this.slides.length){
                     this.index=0;
                 }
+
             },
             prev: function () {
                 this.index--;
-                if (this.index===0) {
-                    this.index= this.slides.length -1;
+                if (this.index===-1) {
+                    this.index= this.slides.length- 1;
                 }
+            },
+            current: function (i) {
+                this.index=i;
             }
         },
     }
